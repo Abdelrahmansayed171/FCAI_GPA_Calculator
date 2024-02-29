@@ -69,9 +69,9 @@ if GRADE_TABLE:
 # credit_hours = credit_hours[:-7]
 
 # grade_records[-1] = 'A'
-# grade_records[-2] = 'B'
+# grade_records[-2] = 'B+'
 # grade_records[-4] = 'B'
-# grade_records[-5] = 'B'
+# grade_records[-5] = 'B+'
 # grade_records[-6] = 'A+'
 # grade_records[-7] = 'A'
 
@@ -82,7 +82,7 @@ print(credit_hours)
 
 
 for i in range(len(grade_records)):
-    if grade_records[i] == 'Abs' or grade_records[i] == '':
+    if grade_records[i] == 'Abs' or grade_records[i] == '' or grade_records[i] == 'Con':
         credit_hours[i] = 0
 
 
