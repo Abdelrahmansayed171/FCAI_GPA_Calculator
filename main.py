@@ -66,16 +66,20 @@ if GRADE_TABLE:
 # grade_records[-5] = 'B'
 # grade_records[-6] = 'B'
 # grade_records[-8] = 'A+'
-credit_hours[-3] = 6
+# credit_hours[-3] = 6
 
 # Print the extracted grade records
 print(grade_records)
-print(credit_hours)
-print(sum(credit_hours))
 
 for i in range(len(grade_records)):
     if grade_records[i] == 'Abs' or grade_records[i] == '' or grade_records[i] == 'Con' or course_names[i] == 'Field Training':
         credit_hours[i] = 0
+
+    if course_names[i] == 'Graduation Project' and grade_records[i] != 'Con':
+        credit_hours[i] = 6
+
+print(credit_hours)
+print(sum(credit_hours))
 
 
 # Calculate GPA
